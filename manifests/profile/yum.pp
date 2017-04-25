@@ -22,7 +22,7 @@ class topaas::profile::yum {
 			             'java-1.8.0-oracle.x86_64' ]
 			package {$install:
 				ensure  	=> present,
-	  }
+
 	  '7': {
 			# Adding REPO
 			yumrepo { "RHEL7_INSTALL":
@@ -49,5 +49,4 @@ class topaas::profile::yum {
 									 'java-1.8.0-oracle.x86_64' ]
 			package {$install:
 				ensure  	=> present,
-	  }
 }
