@@ -48,5 +48,6 @@ class topaas::profile::yum {
 									 'git',
 									 'java-1.8.0-oracle.x86_64' ]
 			package {$install: ensure  	=> present}
+	  }
 	}
 }
