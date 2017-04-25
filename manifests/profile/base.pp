@@ -11,7 +11,7 @@ class topaas::profile::base {
 	# Standard config files
 	file { '/etc/screenrc':
 		ensure		=> present,
-		source		=> "puppet:///modules/profile/screenrc",
+		source		=> "puppet:///modules/topaas/screenrc",
 		owner		=> 'root',
 		group		=> 'root',
 		mode		=> '0644',

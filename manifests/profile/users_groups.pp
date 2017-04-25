@@ -50,7 +50,7 @@ class topaas::profile::users_groups {
 	# Sudo
 	sudo::conf {'sprinters_sudo':
                 ensure          => 'present',
-                source          => 'puppet:///modules/profile/sprinters-sudo',
+                source          => 'puppet:///modules/topaas/sprinters-sudo',
                 sudo_file_name  => 'sprinters'
         }
 	# SSH keys
