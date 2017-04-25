@@ -1,0 +1,2 @@
+appbeheer               ALL=(ALL) NOPASSWD: ALL
+oracle                  ALL=(ALL) NOPASSWD: ALL

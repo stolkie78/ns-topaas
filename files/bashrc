@@ -1,0 +1,36 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific aliases and functions
+# Oracle bashrc
+
+# Exports
+export EDITOR=vi
+export ORACLE_BASE=/opt/oracle
+export ORACLE_HOME=/opt/oracle/product/12.1/db
+export ORACLE_PATH=${ORACLE_BASE}/global/scripts/sql
+export SQLPATH=${ORACLE_PATH}
+export NLS_LANG=american_america.we8iso8859P1
+export ORA_NLS33=${ORACLE_HOME}/ocommon/nls/admin/data
+export PATH=${ORACLE_BASE}/global/scripts/shell:${ORACLE_BASE}/local/scripts/shell:${ORACLE_HOME}/bin:${ORACLE_HOME}/OPatch:${PATH}
+export LD_LIBRARY_PATH=${ORACLE_HOME}/lib
+export CLASSPATH=:${ORACLE_HOME}/jdbc/lib/classes12.zip
+export ORACLE_OWNER=oracle
+
+# Aliases
+alias vi=vim
+alias pti='/opt/oracle/global/scripts/shell/pti_datapump.sh'
+alias sp="sqlplus ${LOGNAME}_OWNER/${LOGNAME}_OWNER@${LOGNAME}"
+alias spi='sqlplus "/ as sysdba"'
+
+# Umask
+umask 0007
+
+# Set prompt
+export PS1='${USER}@${HOSTNAME}:${PWD} ($ORACLE_SID)$ '
+
+# Installed databases
