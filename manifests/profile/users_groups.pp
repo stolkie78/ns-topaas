@@ -23,14 +23,6 @@ class topaas::profile::users_groups {
 		managehome	=> true,
 		uid		=> '3001'
 	}
-	user { 'geurt':
-		ensure		=> 'present',
-		home		=> '/home/geurt',
-		gid		=> '3000',
-		shell		=> '/bin/bash',
-		managehome	=> true,
-		uid		=> '3002'
-	}
 	user { 'marcel':
 		ensure		=> 'present',
 		home		=> '/home/marcel',
@@ -76,14 +68,7 @@ class topaas::profile::users_groups {
 		 key    	=> 'AAAAB3NzaC1yc2EAAAABJQAAAIEAuNraoiddYWINh/A73BuRDlD7wyajp4HX/Fi/jpoPgxUpU+cZoCbkS22mp0m3LWqJH/zCJHJuh9o+RzMkRKsGi5KjNnQyisbIJecbDoNNC4iXqRfSFAZle1uz62KwuqABlh+0ema1N/X9Yrl8tSg5iNonB01+kboMLRPGjX7hho8=',
 		 require	=> User['harald']
 	}
-	ssh_authorized_key { 'geurt.schimmel':
-		 ensure 	=> present,
-		 user   	=> 'geurt',
-		 type   	=> 'ssh-rsa',
-		 key    	=> 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCx4IphbOCh7LhnleyITW/lfikwsnp4FZwV44tOOLeOSM7owIAwT9wYt29cxeq6oKwVhR2hGd83Fm1+gbk6fxHBPPNSGYOoA7Kk5bwzNBPGzbRcuGG1EKKfHXtw4eE+VAlt2eHHayAmKkoQDlCLVqTrpk/t4B35kwBVAxsRrTtpGTPIwcn6bMxqr4ZeFACRYeEHbPF0kVH8qN3jsDyoNue62hVYflhJ29vCYCZBTDqPqK5LmaWi29ib8qC+PBRStCzpDsOJs/RSiAVrylkzjHCULH5P1R/Dohhf/YH+fuAtpj+Xdc3syqefZHEFbwXGm/jZpj+05jUL3dDK7FH1rINL',
-		 require	=> User['geurt']
-	}
-	ssh_authorized_key { 'jeroen.admiraal':
+  ssh_authorized_key { 'jeroen.admiraal':
 		 ensure 	=> present,
 		 user   	=> 'jeroen',
 		 type   	=> 'ssh-rsa',

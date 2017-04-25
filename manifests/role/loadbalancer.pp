@@ -1,3 +1,4 @@
 class topaas::role::loadbalancer {
-  Class['topaas::profile::base'] 
+  include 'topaas::profile::base'
+  include 'topaas::profile::users_groups'
 }
