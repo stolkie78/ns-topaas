@@ -20,8 +20,8 @@ class topaas::profile::yum {
 				           'telnet',
 				           'git',
 			             'java-1.8.0-oracle.x86_64' ]
-			package {$install:
-				ensure  	=> present,
+			package {$install: ensure  	=> present}
+		}
 
 	  '7': {
 			# Adding REPO
@@ -47,6 +47,6 @@ class topaas::profile::yum {
 									 'telnet',
 									 'git',
 									 'java-1.8.0-oracle.x86_64' ]
-			package {$install:
-				ensure  	=> present,
+			package {$install: ensure  	=> present}
+	}
 }
